@@ -6,7 +6,7 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm cups libgnome-keyring libnotify
+pacman -Syu --noconfirm cups libnotify
 
 if [ "$ARCH" = 'x86_64' ]; then
 	pacman -Syu --noconfirm libva-intel-driver
@@ -17,6 +17,7 @@ echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano intel-media-driver-mini ffmpeg-mini
 
 # Comment this out if you need an AUR package
+make-aur-package libgnome-keyring
 make-aur-package brave-origin-bin
 
 # If the application needs to be manually built that has to be done down here
