@@ -23,6 +23,7 @@ quick-sharun \
 	/usr/lib/libgtk-3.so*
 
 # Additional changes can be done in between here
+echo 'ANYLINUX_DO_NOT_LOAD_LIBS=libgtk-4.so*:${ANYLINUX_DO_NOT_LOAD_LIBS}' >> ./AppDir/.env
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
