@@ -18,7 +18,9 @@ export DEPLOY_P11KIT=1
 export URUNTIME_PRELOAD=1 # really needed here
 
 # Deploy dependencies
-quick-sharun ./AppDir/bin/*
+quick-sharun \
+	./AppDir/bin/* \
+	/usr/lib/libgtk-3.so*
 
 # Additional changes can be done in between here
 
